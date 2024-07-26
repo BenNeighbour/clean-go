@@ -22,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type GoodbyeClient interface {
-	// Sends a goodbye
+	// Sends a goodbye.go
 	SayGoodbye(ctx context.Context, in *GoodbyeRequest, opts ...grpc.CallOption) (*GoodbyeReply, error)
 }
 
@@ -47,7 +47,7 @@ func (c *goodbyeClient) SayGoodbye(ctx context.Context, in *GoodbyeRequest, opts
 // All implementations must embed UnimplementedGoodbyeServer
 // for forward compatibility
 type GoodbyeServer interface {
-	// Sends a goodbye
+	// Sends a goodbye.go
 	SayGoodbye(context.Context, *GoodbyeRequest) (*GoodbyeReply, error)
 	mustEmbedUnimplementedGoodbyeServer()
 }

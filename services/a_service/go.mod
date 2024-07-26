@@ -1,4 +1,4 @@
-module benneighbour.com/a_service
+module benneighbour.com/services/a_service
 
 go 1.22.5
 
@@ -15,6 +15,6 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 )
 
-replace benneighbour.com/proto => ../proto
+replace benneighbour.com/proto => ./../../libs/proto
 
-replace benneighbour.com/dev => ../dev
+replace benneighbour.com/dev => ../../dev

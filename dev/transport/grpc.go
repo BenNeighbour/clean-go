@@ -12,8 +12,8 @@ func InitializeSuperTransport(listener net.Listener) {
 	server := grpc.NewServer()
 
 	// Register each other service's transport for the combined server
-	for _, service := range config.Services {
-		service.Register(server)
+	for _, attach := range config.Services {
+		attach(server)
 	}
 
 	// Register the dev server for client reflection

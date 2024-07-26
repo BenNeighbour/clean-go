@@ -3,22 +3,20 @@ package config
 import (
 	"google.golang.org/grpc"
 
-	aTransport "benneighbour.com/a_service/transport"
-	bTransport "benneighbour.com/b_service/transport"
-	//bTransport "benneighbour.com/c_service/transport"
-	//bTransport "benneighbour.com/d_service/transport"
-	//bTransport "benneighbour.com/f_service/transport"
+	a "benneighbour.com/services/a_service/transport"
+	b "benneighbour.com/services/b_service/transport"
+	//c "benneighbour.com/services/c_service/transport"
+	//d "benneighbour.com/services/d_service/transport"
+	//e "benneighbour.com/services/e_service/transport"
+	//f "benneighbour.com/services/f_service/transport"
 )
 
-var Services = []struct {
-	Name     string
-	Register func(*grpc.Server)
-}{
-	{Name: "a_transport", Register: aTransport.Register},
-	{Name: "b_transport", Register: bTransport.Register},
-	//{Name: "c_transport", Register: cTransport.Register},
-	//{Name: "d_transport", Register: dTransport.Register},
-	//{Name: "e_transport", Register: eTransport.Register},
-	//{Name: "f_transport", Register: fTransport.Register},
+var Services = []func(*grpc.Server){
+	a.Register,
+	b.Register,
+	//{Name: "c_transport", Register: c.Register},
+	//{Name: "d_transport", Register: d.Register},
+	//{Name: "e_transport", Register: e.Register},
+	//{Name: "f_transport", Register: f.Register},
 	//etc...
 }

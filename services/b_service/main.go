@@ -9,8 +9,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
-	"benneighbour.com/a_service/config"
-	"benneighbour.com/a_service/transport"
+	"benneighbour.com/services/b_service/config"
+	"benneighbour.com/services/b_service/transport"
 )
 
 // initializeTransport sets up and starts the gRPC server.
