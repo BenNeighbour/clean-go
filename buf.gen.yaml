@@ -7,10 +7,10 @@ managed:
       - buf.build/googleapis/googleapis
 plugins:
   - name: go
-    out: proto/generated
+    out: proto/autogen
     opt: paths=source_relative
   - plugin: buf.build/grpc/go
-    out: proto/generated
+    out: proto/autogen
     opt:
       - paths=source_relative
   # Other plugins here

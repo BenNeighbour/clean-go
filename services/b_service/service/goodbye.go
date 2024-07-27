@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	proto "benneighbour.com/proto/generated/b_service/goodbye"
+	proto "benneighbour.com/proto/autogen/b_service/goodbye"
 )
 
 // GoodbyeService defines the interface for the Goodbye service

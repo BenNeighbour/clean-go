@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 	"log"
 
-	proto "benneighbour.com/proto/generated/b_service/goodbye"
+	proto "benneighbour.com/proto/autogen/b_service/goodbye"
 	"benneighbour.com/services/b_service/service"
 )
 
