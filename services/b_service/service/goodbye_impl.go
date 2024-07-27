@@ -22,6 +22,8 @@ func NewGoodbyeService() GoodbyeService {
 func (s *GoodbyeServiceImpl) SayGoodbye(ctx context.Context, req *proto.GoodbyeRequest) (*proto.GoodbyeReply, error) {
 	// Extract the name from the request and log it
 	name := req.GetName()
+
+	// Log this
 	log.Printf("Received GOODBYE request with name: %s", name)
 
 	// Return the response with a formatted message
