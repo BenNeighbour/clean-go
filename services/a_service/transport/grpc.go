@@ -6,7 +6,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	proto "benneighbour.com/proto/a_service"
+	proto "benneighbour.com/proto/generated/a_service/hello"
 )
 
 // HelloTransport implements the protobuf HelloServer interface

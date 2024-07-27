@@ -15,4 +15,4 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 )
 
-replace benneighbour.com/proto => ./../../libs/proto
+replace benneighbour.com/proto => ./../../proto

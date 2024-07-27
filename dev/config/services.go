@@ -14,9 +14,5 @@ import (
 var Services = []func(*grpc.Server){
 	a.Register,
 	b.Register,
-	//{Name: "c_transport", Register: c.Register},
-	//{Name: "d_transport", Register: d.Register},
-	//{Name: "e_transport", Register: e.Register},
-	//{Name: "f_transport", Register: f.Register},
 	//etc...
 }

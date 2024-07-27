@@ -1,0 +1,16 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: benneighbour.com/services/b_service/proto
+    except:
+      - buf.build/googleapis/googleapis
+plugins:
+  - name: go
+    out: proto/generated
+    opt: paths=source_relative
+  - plugin: buf.build/grpc/go
+    out: proto/generated
+    opt:
+      - paths=source_relative
+  # Other plugins here

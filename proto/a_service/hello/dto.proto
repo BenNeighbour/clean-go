@@ -1,14 +1,6 @@
 syntax = "proto3";
 
-option go_package = "benneighbour.com/proto/a_service";
-
-package a_service;
-
-// The greeting service definition.
-service Hello {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
-}
+package hello;
 
 // The request message containing the user's name.
 message HelloRequest {

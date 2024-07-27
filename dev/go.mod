@@ -2,12 +2,6 @@ module benneighbour.com/dev
 
 go 1.22.5
 
-replace benneighbour.com/services/a_service => ../services/a_service
-
-replace benneighbour.com/proto => ./../libs/proto
-
-replace benneighbour.com/services/b_service => ../services/b_service
-
 require (
 	benneighbour.com/services/a_service v0.0.0-00010101000000-000000000000
 	benneighbour.com/services/b_service v0.0.0-00010101000000-000000000000
@@ -22,3 +16,9 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240723171418-e6d459c13d2a // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 )
+
+replace benneighbour.com/services/b_service => ../services/b_service
+
+replace benneighbour.com/services/a_service => ../services/a_service
+
+replace benneighbour.com/proto => ../proto

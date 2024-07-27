@@ -1,14 +1,10 @@
 syntax = "proto3";
 
-option go_package = "benneighbour.com/proto/b_service";
+package goodbye;
 
-package b_service;
+option go_package = 'com.benneighbour/proto/b_service';
 
-// The greeting service definition.
-service Goodbye {
-  // Sends a goodbye
-  rpc SayGoodbye (GoodbyeRequest) returns (GoodbyeReply) {}
-}
+//import "validate/validate.proto";
 
 // The request message containing the user's name.
 message GoodbyeRequest {

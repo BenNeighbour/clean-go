@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 	"log"
 
-	proto "benneighbour.com/proto/b_service"
+	proto "benneighbour.com/proto/generated/b_service/goodbye"
 	"benneighbour.com/services/b_service/service"
 )
 
@@ -16,9 +16,9 @@ type GoodbyeTransport struct {
 }
 
 // NewGoodbyeTransport creates a new GoodbyeTransport instance with the given service
-func NewGoodbyeTransport(service service.GoodbyeService) *GoodbyeTransport {
+func NewGoodbyeTransport() *GoodbyeTransport {
 	return &GoodbyeTransport{
-		service: service,
+		service: service.NewGoodbyeService(),
 	}
 }
 
@@ -39,5 +39,5 @@ func (s *GoodbyeTransport) SayGoodbye(ctx context.Context, req *proto.GoodbyeReq
 
 func Register(server *grpc.Server) {
 	// Register the GoodbyeTransport with its dependencies
-	proto.RegisterGoodbyeServer(server, NewGoodbyeTransport(service.NewGoodbyeService()))
+	proto.RegisterGoodbyeServer(server, NewGoodbyeTransport())
 }

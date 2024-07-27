@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	proto "benneighbour.com/proto/b_service"
+	proto "benneighbour.com/proto/generated/b_service/goodbye"
 )
 
 // GoodbyeServiceImpl is an implementation of the GoodbyeService interface

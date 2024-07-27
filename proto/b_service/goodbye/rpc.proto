@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package goodbye;
+
+option go_package = 'com.benneighbour/proto/b_service';
+
+import "b_service/goodbye/dto.proto";
+
+// The greeting service definition.
+service Goodbye {
+  // Sends a goodbye
+  rpc SayGoodbye (GoodbyeRequest) returns (GoodbyeReply) {}
+}
