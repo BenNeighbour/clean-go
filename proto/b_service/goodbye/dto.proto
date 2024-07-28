@@ -4,14 +4,16 @@ package goodbye;
 
 option go_package = 'com.benneighbour/proto/b_service';
 
-//import "validate/validate.proto";
+import "google/protobuf/timestamp.proto";
 
 // The request message containing the user's name.
 message GoodbyeRequest {
-  string name = 1;
+  string message = 1;
 }
 
 // The response message containing the greetings
 message GoodbyeReply {
   string message = 1;
+  string user_uuid = 2;
+  google.protobuf.Timestamp timestamp = 3;
 }

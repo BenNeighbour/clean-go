@@ -1,15 +1,18 @@
 package transport
 
 import (
+	"benneighbour.com/services/b_service/db"
+	"benneighbour.com/services/b_service/repository"
 	"context"
 	"google.golang.org/grpc"
 	"log"
 
-	proto "benneighbour.com/proto/autogen/b_service/goodbye"
 	"benneighbour.com/services/b_service/service"
+
+	proto "benneighbour.com/proto/autogen/b_service/goodbye"
 )
 
-// GoodbyeTransport implements the protobuf GoodbyeServer interface
+// GoodbyeTransport implements the protobuf GoodbyeServer interface, and can also access the service layer
 type GoodbyeTransport struct {
 	proto.UnimplementedGoodbyeServer
 	service service.GoodbyeService
@@ -18,7 +21,7 @@ type GoodbyeTransport struct {
 // NewGoodbyeTransport creates a new GoodbyeTransport instance with the given service
 func NewGoodbyeTransport() *GoodbyeTransport {
 	return &GoodbyeTransport{
-		service: service.NewGoodbyeService(),
+		service: service.NewGoodbyeService(repository.NewGoodbyeRepository(db.Register())),
 	}
 }
 

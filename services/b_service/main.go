@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"log"
 	"net"
@@ -33,8 +32,8 @@ func initializeTransport(listener net.Listener) {
 }
 
 func main() {
-	// Parse command-line flags to initialize the environment.
-	flag.Parse()
+	// Initialize configuration
+	config.Initialize()
 
 	// Listen on the specified port.
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", *config.SERVER_PORT))

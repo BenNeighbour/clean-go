@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"log"
 	"net"
@@ -12,7 +11,7 @@ import (
 
 func main() {
 	// Firstly, load into our environment by parsing the command-line flags
-	flag.Parse()
+	config.Initialize()
 
 	// Listen on the requested port
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", *config.SERVER_PORT))
